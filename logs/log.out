@@ -1,0 +1,9 @@
+Thread-4 - 2019-06-25 23:08:55,010 - flask.app - INFO - Creating new story
+Thread-2 - 2019-06-25 23:10:25,049 - flask.app - INFO - Creating new story
+Thread-2 - 2019-06-25 23:11:09,326 - flask.app - INFO - Creating new story
+Thread-3 - 2019-06-25 23:13:11,530 - flask.app - INFO - Creating new story
+Thread-2 - 2019-06-25 23:13:29,806 - flask.app - INFO - Creating new story
+Thread-2 - 2019-06-25 23:13:54,180 - flask.app - INFO - Creating new story
+Thread-3 - 2019-06-25 23:14:13,515 - flask.app - INFO - Creating new story
+Thread-2 - 2019-06-25 23:14:49,458 - flask.app - INFO - Creating new story
+Thread-3 - 2019-06-25 23:35:12,750 - flask.app - INFO - Creating new story
