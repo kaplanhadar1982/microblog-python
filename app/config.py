@@ -7,31 +7,31 @@ from decouple import config as env_conf
 import logging
 
 
-# class LocalPSQLConfig:
-#     # To initate the local config. Basically adds bunch of logger handlers with
-#     # a postgre sql setup
+class LocalPSQLConfig:
+    # To initate the local config. Basically adds bunch of logger handlers with
+    # a postgre sql setup
 
-#     DB_USER = env_conf('DATABASE_USER')
-#     DB_PASSWORD = env_conf('DATABASE_PASS')
-#     DB_HOST = env_conf('DATABASE_HOST')
-#     DB_PORT = env_conf('DATABASE_PORT')
-#     DB_NAME = env_conf('DATABASE_NAME')
-#     SQLALCHEMY_DATABASE_URI = 'postgresql+psycopg2://{}:{}@{}:{}/{}'.\
-#         format(DB_USER, DB_PASSWORD, DB_HOST, DB_PORT, DB_NAME)
+    DB_USER = env_conf('DATABASE_USER')
+    DB_PASSWORD = env_conf('DATABASE_PASS')
+    DB_HOST = env_conf('DATABASE_HOST')
+    DB_PORT = env_conf('DATABASE_PORT')
+    DB_NAME = env_conf('DATABASE_NAME')
+    SQLALCHEMY_DATABASE_URI = 'postgresql+psycopg2://{}:{}@{}:{}/{}'.\
+        format(DB_USER, DB_PASSWORD, DB_HOST, DB_PORT, DB_NAME)
 
-#     SQLALCHEMY_TRACK_MODIFICATIONS = False
-#     SQLALCHEMY_RECORD_QUERIES = True
+    SQLALCHEMY_TRACK_MODIFICATIONS = False
+    SQLALCHEMY_RECORD_QUERIES = True
 
-#     SECRET_KEY = env_conf("SECRET_KEY", cast=str, default="12345")
+    SECRET_KEY = env_conf("SECRET_KEY", cast=str, default="12345")
 
-#     @classmethod
-#     def init_app(cls, app):
-#         # The default Flask logger level is set at ERROR, so if you want to see
-#         # INFO level or DEBUG level logs, you need to lower the main loggers
-#         # level first.
-#         app.logger.setLevel(logging.DEBUG)
-#         app.logger.addHandler(file_logger)
-#         app.logger.addHandler(client_logger)
+    @classmethod
+    def init_app(cls, app):
+        # The default Flask logger level is set at ERROR, so if you want to see
+        # INFO level or DEBUG level logs, you need to lower the main loggers
+        # level first.
+        app.logger.setLevel(logging.DEBUG)
+        app.logger.addHandler(file_logger)
+        app.logger.addHandler(client_logger)
 
 
 class Develop:
@@ -64,6 +64,6 @@ class Develop:
 # Create a config dictionary which is used while initiating the application.
 # Config that is going to be used will be specified in the .env file
 config_dict = {
-    #'localpsql': LocalPSQLConfig,
+    'localpsql': LocalPSQLConfig,
     'develop': Develop,
 }

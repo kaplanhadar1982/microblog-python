@@ -1,14 +1,18 @@
-from sqlalchemy import Column, Integer, String,DateTime
-
+from flask import jsonify
+from datetime import datetime
 from app import db
+
+
+from app.models.post import Post
 
 class User(db.Model):
     __tablename__ = 'users'
-    id = db.Column(Integer, primary_key=True)
-    name = db.Column(String(50), unique=True)
-    email = db.Column(String(120), unique=True)
-    password = db.Column(String(120), unique=True)
-    created_on = db.Column(DateTime)
+    id = db.Column(db.Integer, primary_key=True)
+    name = db.Column(db.String(50), unique=True)
+    email = db.Column(db.String(120), unique=True)
+    password = db.Column(db.String(120), unique=True)
+    created_on = db.Column(db.DateTime(), default=datetime.utcnow)
+    posts = db.relationship("Post", order_by = Post.id, back_populates = "user")
 
     def __init__(self, **kwargs):
         # Helps with class initiation, basically what every attribute you give
@@ -21,7 +25,8 @@ class User(db.Model):
             'name': self.name,
             'email': self.email,
             'password': self.password,
-            'created_on': self.created_on
+            'created_on': self.created_on,
+            'posts': str([p for p in self.posts])
         }
         return json_user
 

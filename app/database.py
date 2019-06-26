@@ -14,7 +14,7 @@ def init_db():
     # import all modules here that might define models so that
     # they will be registered properly on the metadata.  Otherwise
     # you will have to import them first before calling init_db()
-    from models.user import User
-    from models.post import Post
+    from app.models.user import User
+    from app.models.post import Post
     User.posts = relationship("Post", order_by = Post.id, back_populates = "user")
     Base.metadata.create_all(bind=engine)
