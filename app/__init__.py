@@ -10,11 +10,16 @@ db = SQLAlchemy()
 # For database migrations
 migrate = Migrate()
 
+bcrypt=Bcrypt()
+
 def create_app(config_key='local'):
     app = Flask(__name__)
+    
     # Enabling config initiation
     app.config.from_object(config_dict[config_key])
     config_dict[config_key].init_app(app)
+
+    bcrypt.init_app(app)
 
     db.init_app(app)
     migrate.init_app(app, db)

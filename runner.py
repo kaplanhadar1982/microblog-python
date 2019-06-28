@@ -24,3 +24,4 @@ def deploy():
     upgrade()
 
 ####https://github.com/alisezer/flask-template
+####https://realpython.com/token-based-authentication-with-flask/

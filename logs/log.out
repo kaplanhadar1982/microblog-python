@@ -24,3 +24,13 @@ Thread-5 - 2019-06-26 21:41:57,555 - flask.app - INFO - Creating new post
 Thread-6 - 2019-06-26 21:46:20,984 - flask.app - INFO - Creating new post
 Thread-7 - 2019-06-26 21:46:27,003 - flask.app - INFO - Creating new post
 Thread-3 - 2019-06-26 22:03:58,183 - flask.app - INFO - Creating new post
+Thread-2 - 2019-06-28 09:52:46,168 - flask.app - INFO - Creating new user
+Thread-2 - 2019-06-28 10:08:26,089 - flask.app - INFO - Creating new user
+Thread-2 - 2019-06-28 11:17:56,208 - flask.app - INFO - Creating new user
+Thread-2 - 2019-06-28 11:18:47,156 - flask.app - INFO - Creating new user
+Thread-2 - 2019-06-28 11:20:25,117 - flask.app - INFO - Creating new user
+Thread-2 - 2019-06-28 11:21:07,929 - flask.app - INFO - Creating new user
+Thread-2 - 2019-06-28 11:24:54,449 - flask.app - INFO - Creating new user
+Thread-2 - 2019-06-28 11:25:44,799 - flask.app - INFO - Creating new user
+Thread-2 - 2019-06-28 11:26:32,038 - flask.app - INFO - Creating new user
+Thread-2 - 2019-06-28 11:26:54,953 - flask.app - INFO - Creating new user
