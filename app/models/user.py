@@ -2,7 +2,7 @@ from flask import jsonify
 from datetime import datetime,timedelta
 from app import db,bcrypt
 from decouple import config
-import jwt
+from app.utilities.jwt import encode_auth_token
 
 
 from app.models.post import Post
@@ -26,7 +26,7 @@ class User(db.Model):
             'id': self.id,
             'name': self.name,
             'email': self.email,
-            'token': str(self.encode_auth_token()),
+            'token': str(encode_auth_token(self.id)),
             'created_on': self.created_on,
             'posts': str([p for p in self.posts])
         }
@@ -53,37 +53,6 @@ class User(db.Model):
         return user
 
 
-    def encode_auth_token(self):
-        """
-        Generates the Auth Token
-        :return: string
-        """
-        try:
-            payload = {
-                'exp': datetime.utcnow() + timedelta(days=0, seconds=5),
-                'iat': datetime.utcnow(),
-                'sub': self.id
-            }
-            return jwt.encode(
-                payload,
-                config("SECRET_KEY", cast=str),
-                algorithm='HS256'
-            )
-        except Exception as e:
-            return e
+    
 
     
-    @staticmethod
-    def decode_auth_token(auth_token):
-        """
-        Decodes the auth token
-        :param auth_token:
-        :return: integer|string
-        """
-        try:
-            payload = jwt.decode(auth_token,config("SECRET_KEY", cast=str))
-            return payload['sub']
-        except jwt.ExpiredSignatureError:
-            return 'Signature expired. Please log in again.'
-        except jwt.InvalidTokenError:
-            return 'Invalid token. Please log in again.'

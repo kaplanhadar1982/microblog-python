@@ -34,3 +34,41 @@ Thread-2 - 2019-06-28 11:24:54,449 - flask.app - INFO - Creating new user
 Thread-2 - 2019-06-28 11:25:44,799 - flask.app - INFO - Creating new user
 Thread-2 - 2019-06-28 11:26:32,038 - flask.app - INFO - Creating new user
 Thread-2 - 2019-06-28 11:26:54,953 - flask.app - INFO - Creating new user
+Thread-2 - 2019-06-29 20:54:08,975 - flask.app - INFO - Creating new user
+Thread-4 - 2019-06-29 21:10:16,096 - flask.app - INFO - Creating new post
+Thread-3 - 2019-06-29 21:53:01,816 - flask.app - INFO - Creating new post
+Thread-2 - 2019-06-29 21:55:20,054 - flask.app - INFO - Creating new post
+Thread-4 - 2019-06-29 21:56:04,307 - flask.app - INFO - Creating new post
+Thread-5 - 2019-06-29 21:56:15,917 - flask.app - INFO - Creating new user
+Thread-7 - 2019-06-29 21:56:51,977 - flask.app - INFO - Creating new user
+Thread-2 - 2019-06-29 22:02:49,809 - flask.app - INFO - Get all users
+Thread-2 - 2019-06-29 22:03:43,734 - flask.app - INFO - Get all users
+Thread-2 - 2019-06-29 22:09:02,999 - flask.app - INFO - Creating new post
+Thread-2 - 2019-06-29 22:09:39,420 - flask.app - INFO - Creating new post
+Thread-2 - 2019-06-29 22:09:39,451 - flask.app - ERROR - new_post(psycopg2.errors.InvalidTextRepresentation) invalid input syntax for integer: "Signature expired. Please log in again."
+LINE 1: ... user_id) VALUES ('gfdgfdgfd post', '2011-01-01', 'Signature...
+                                                             ^
+
+[SQL: INSERT INTO posts (text, created_on, user_id) VALUES (%(text)s, %(created_on)s, %(user_id)s) RETURNING posts.id]
+[parameters: {'text': 'gfdgfdgfd post', 'created_on': '2011-01-01', 'user_id': 'Signature expired. Please log in again.'}]
+(Background on this error at: http://sqlalche.me/e/9h9h)
+Thread-2 - 2019-06-29 22:10:06,832 - flask.app - INFO - Creating new post
+Thread-2 - 2019-06-29 22:10:06,868 - flask.app - ERROR - new_post(psycopg2.errors.InvalidTextRepresentation) invalid input syntax for integer: "Signature expired. Please log in again."
+LINE 1: ... user_id) VALUES ('gfdgfdgfd post', '2011-01-01', 'Signature...
+                                                             ^
+
+[SQL: INSERT INTO posts (text, created_on, user_id) VALUES (%(text)s, %(created_on)s, %(user_id)s) RETURNING posts.id]
+[parameters: {'text': 'gfdgfdgfd post', 'created_on': '2011-01-01', 'user_id': 'Signature expired. Please log in again.'}]
+(Background on this error at: http://sqlalche.me/e/9h9h)
+Thread-2 - 2019-06-29 22:11:29,784 - flask.app - INFO - Creating new post
+Thread-2 - 2019-06-29 22:11:29,816 - flask.app - ERROR - new_post(psycopg2.errors.InvalidTextRepresentation) invalid input syntax for integer: "Signature expired. Please log in again."
+LINE 1: ... user_id) VALUES ('gfdgfdgfd post', '2011-01-01', 'Signature...
+                                                             ^
+
+[SQL: INSERT INTO posts (text, created_on, user_id) VALUES (%(text)s, %(created_on)s, %(user_id)s) RETURNING posts.id]
+[parameters: {'text': 'gfdgfdgfd post', 'created_on': '2011-01-01', 'user_id': 'Signature expired. Please log in again.'}]
+(Background on this error at: http://sqlalche.me/e/9h9h)
+Thread-4 - 2019-06-29 22:11:45,787 - flask.app - INFO - Creating new post
+Thread-5 - 2019-06-29 22:12:01,324 - flask.app - ERROR - new_post'NoneType' object has no attribute 'get'
+Thread-2 - 2019-06-29 22:12:33,826 - flask.app - ERROR - get_posts'NoneType' object has no attribute 'get'
+Thread-2 - 2019-06-29 22:14:36,978 - flask.app - ERROR - get_posts'NoneType' object has no attribute 'get'
