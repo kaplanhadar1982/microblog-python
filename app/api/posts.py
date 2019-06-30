@@ -7,6 +7,7 @@ from app.utilities.jwt import decode_auth_token
 
 @api.route('/posts', methods=['POST'])
 def new_post():
+
     try:
         auth_token = request.json.get('token')
         user_id = decode_auth_token(auth_token)
@@ -19,13 +20,13 @@ def new_post():
         current_app.logger.error('new_post' + str(e))
         return jsonify({"error": "something went worng"}), 500
 
+
 @api.route('/posts', methods=['GET'])
 def get_posts():
+    
     try:
-        auth_token = request.json.get('token')
-        user_id = decode_auth_token(auth_token)
-        user = db.session.query(User).get(user_id)
-        return jsonify(user.to_full_json()), 200
+        posts = db.session.query(Post)
+        return str([p.to_full_json() for p in posts]), 200
     except Exception as e:
         current_app.logger.error('get_posts' + str(e))
         return jsonify({"error": "something went worng"}), 500

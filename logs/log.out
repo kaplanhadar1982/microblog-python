@@ -72,3 +72,123 @@ Thread-4 - 2019-06-29 22:11:45,787 - flask.app - INFO - Creating new post
 Thread-5 - 2019-06-29 22:12:01,324 - flask.app - ERROR - new_post'NoneType' object has no attribute 'get'
 Thread-2 - 2019-06-29 22:12:33,826 - flask.app - ERROR - get_posts'NoneType' object has no attribute 'get'
 Thread-2 - 2019-06-29 22:14:36,978 - flask.app - ERROR - get_posts'NoneType' object has no attribute 'get'
+Thread-2 - 2019-06-30 21:27:49,131 - flask.app - INFO - Creating new user
+Thread-3 - 2019-06-30 21:28:04,241 - flask.app - INFO - Creating new user
+Thread-4 - 2019-06-30 21:28:14,196 - flask.app - INFO - Creating new user
+Thread-5 - 2019-06-30 21:28:44,915 - flask.app - INFO - Creating new user
+Thread-6 - 2019-06-30 21:28:55,249 - flask.app - INFO - Creating new user
+Thread-7 - 2019-06-30 21:29:15,829 - flask.app - INFO - login
+Thread-8 - 2019-06-30 21:29:44,472 - flask.app - INFO - Creating new post
+Thread-9 - 2019-06-30 21:30:08,230 - flask.app - INFO - Creating new post
+Thread-10 - 2019-06-30 21:30:22,427 - flask.app - INFO - login
+Thread-11 - 2019-06-30 21:30:46,703 - flask.app - INFO - Creating new post
+Thread-12 - 2019-06-30 21:31:07,701 - flask.app - ERROR - get_posts'NoneType' object has no attribute 'get'
+Thread-13 - 2019-06-30 21:31:18,965 - flask.app - INFO - Get all users
+Thread-2 - 2019-06-30 22:00:35,031 - flask.app - ERROR - get_posts'NoneType' object has no attribute 'get'
+Thread-3 - 2019-06-30 22:00:36,098 - flask.app - ERROR - get_posts'NoneType' object has no attribute 'get'
+Thread-4 - 2019-06-30 22:00:54,566 - flask.app - INFO - login
+Thread-5 - 2019-06-30 22:02:30,930 - flask.app - INFO - login
+Thread-6 - 2019-06-30 22:02:46,546 - flask.app - ERROR - new_post400 Bad Request: Failed to decode JSON object: Expecting value: line 4 column 15 (char 184)
+Thread-7 - 2019-06-30 22:03:31,200 - flask.app - ERROR - new_postname 'decode_auth_token' is not defined
+Thread-2 - 2019-06-30 22:04:12,436 - flask.app - ERROR - new_postname 'db' is not defined
+Thread-2 - 2019-06-30 22:04:34,483 - flask.app - ERROR - new_postname 'User' is not defined
+Thread-2 - 2019-06-30 22:05:32,808 - flask.app - ERROR - new_postname 'Vote' is not defined
+Thread-2 - 2019-06-30 22:07:58,112 - flask.app - ERROR - new_postname 'equest' is not defined
+Thread-2 - 2019-06-30 22:08:16,872 - flask.app - INFO - upvote
+Thread-2 - 2019-06-30 22:08:16,927 - flask.app - ERROR - new_post(psycopg2.errors.InvalidTextRepresentation) invalid input syntax for integer: "Signature expired. Please log in again."
+LINE 1: ...O votes (post_id, user_id, created_on) VALUES (8, 'Signature...
+                                                             ^
+
+[SQL: INSERT INTO votes (post_id, user_id, created_on) VALUES (%(post_id)s, %(user_id)s, %(created_on)s)]
+[parameters: {'post_id': 8, 'user_id': 'Signature expired. Please log in again.', 'created_on': '2011-01-01'}]
+(Background on this error at: http://sqlalche.me/e/9h9h)
+Thread-3 - 2019-06-30 22:08:31,349 - flask.app - INFO - login
+Thread-4 - 2019-06-30 22:08:34,929 - flask.app - INFO - upvote
+Thread-4 - 2019-06-30 22:08:34,931 - flask.app - ERROR - new_post(psycopg2.errors.InvalidTextRepresentation) invalid input syntax for integer: "Signature expired. Please log in again."
+LINE 1: ...O votes (post_id, user_id, created_on) VALUES (8, 'Signature...
+                                                             ^
+
+[SQL: INSERT INTO votes (post_id, user_id, created_on) VALUES (%(post_id)s, %(user_id)s, %(created_on)s)]
+[parameters: {'post_id': 8, 'user_id': 'Signature expired. Please log in again.', 'created_on': '2011-01-01'}]
+(Background on this error at: http://sqlalche.me/e/9h9h)
+Thread-5 - 2019-06-30 22:08:55,977 - flask.app - INFO - login
+Thread-6 - 2019-06-30 22:09:07,789 - flask.app - INFO - upvote
+Thread-2 - 2019-06-30 22:18:49,338 - flask.app - INFO - login
+Thread-3 - 2019-06-30 22:19:02,324 - flask.app - ERROR - new_post'NoneType' object has no attribute 'user_id'
+Thread-2 - 2019-06-30 22:19:54,768 - flask.app - INFO - upvote
+Thread-2 - 2019-06-30 22:19:54,807 - flask.app - ERROR - new_post(psycopg2.errors.InvalidTextRepresentation) invalid input syntax for integer: "Signature expired. Please log in again."
+LINE 1: ...O votes (post_id, user_id, created_on) VALUES (8, 'Signature...
+                                                             ^
+
+[SQL: INSERT INTO votes (post_id, user_id, created_on) VALUES (%(post_id)s, %(user_id)s, %(created_on)s)]
+[parameters: {'post_id': 8, 'user_id': 'Signature expired. Please log in again.', 'created_on': '2011-01-01'}]
+(Background on this error at: http://sqlalche.me/e/9h9h)
+Thread-3 - 2019-06-30 22:20:05,231 - flask.app - INFO - login
+Thread-2 - 2019-06-30 22:22:58,567 - flask.app - INFO - login
+Thread-3 - 2019-06-30 22:23:12,150 - flask.app - ERROR - new_postfilter() got an unexpected keyword argument 'post_id'
+Thread-2 - 2019-06-30 22:26:25,940 - flask.app - ERROR - new_postfilter() got an unexpected keyword argument 'post_id'
+Thread-2 - 2019-06-30 22:28:01,962 - flask.app - ERROR - new_postfilter() got an unexpected keyword argument 'post_id'
+Thread-2 - 2019-06-30 22:29:31,936 - flask.app - ERROR - new_postfilter() got an unexpected keyword argument 'user_id'
+Thread-2 - 2019-06-30 22:31:39,341 - flask.app - ERROR - new_postfilter() got an unexpected keyword argument 'user_id'
+Thread-2 - 2019-06-30 22:33:27,018 - flask.app - ERROR - new_postfilter() got an unexpected keyword argument 'user_id'
+Thread-2 - 2019-06-30 22:34:45,086 - flask.app - ERROR - new_post(psycopg2.errors.InvalidTextRepresentation) invalid input syntax for integer: "Signature expired. Please log in again."
+LINE 3: WHERE votes.user_id = 'Signature expired. Please log in agai...
+                              ^
+
+[SQL: SELECT votes.post_id AS votes_post_id, votes.user_id AS votes_user_id, votes.created_on AS votes_created_on 
+FROM votes 
+WHERE votes.user_id = %(user_id_1)s AND votes.post_id = %(post_id_1)s 
+ LIMIT %(param_1)s]
+[parameters: {'user_id_1': 'Signature expired. Please log in again.', 'post_id_1': 9, 'param_1': 1}]
+(Background on this error at: http://sqlalche.me/e/9h9h)
+Thread-3 - 2019-06-30 22:34:56,448 - flask.app - INFO - login
+Thread-4 - 2019-06-30 22:35:09,893 - flask.app - INFO - upvote
+Thread-6 - 2019-06-30 22:37:41,712 - flask.app - ERROR - new_post(psycopg2.errors.InvalidTextRepresentation) invalid input syntax for integer: "Signature expired. Please log in again."
+LINE 3: WHERE votes.user_id = 'Signature expired. Please log in agai...
+                              ^
+
+[SQL: SELECT votes.post_id AS votes_post_id, votes.user_id AS votes_user_id, votes.created_on AS votes_created_on 
+FROM votes 
+WHERE votes.user_id = %(user_id_1)s AND votes.post_id = %(post_id_1)s 
+ LIMIT %(param_1)s]
+[parameters: {'user_id_1': 'Signature expired. Please log in again.', 'post_id_1': 10, 'param_1': 1}]
+(Background on this error at: http://sqlalche.me/e/9h9h)
+Thread-7 - 2019-06-30 22:37:52,943 - flask.app - INFO - login
+Thread-9 - 2019-06-30 22:38:11,731 - flask.app - INFO - upvote
+Thread-2 - 2019-06-30 22:42:32,590 - flask.app - INFO - login
+Thread-3 - 2019-06-30 22:43:07,432 - flask.app - INFO - downvote
+Thread-3 - 2019-06-30 22:43:07,454 - flask.app - ERROR - downvote(psycopg2.errors.InvalidTextRepresentation) invalid input syntax for integer: "Signature expired. Please log in again."
+LINE 3: WHERE votes.user_id = 'Signature expired. Please log in agai...
+                              ^
+
+[SQL: SELECT votes.post_id AS votes_post_id, votes.user_id AS votes_user_id, votes.created_on AS votes_created_on 
+FROM votes 
+WHERE votes.user_id = %(user_id_1)s AND votes.post_id = %(post_id_1)s 
+ LIMIT %(param_1)s]
+[parameters: {'user_id_1': 'Signature expired. Please log in again.', 'post_id_1': 8, 'param_1': 1}]
+(Background on this error at: http://sqlalche.me/e/9h9h)
+Thread-4 - 2019-06-30 22:43:17,834 - flask.app - INFO - login
+Thread-5 - 2019-06-30 22:43:28,015 - flask.app - INFO - downvote
+Thread-5 - 2019-06-30 22:43:28,040 - flask.app - ERROR - downvotename 'vote' is not defined
+Thread-2 - 2019-06-30 22:44:19,539 - flask.app - INFO - downvote
+Thread-2 - 2019-06-30 22:44:19,583 - flask.app - ERROR - downvote(psycopg2.errors.InvalidTextRepresentation) invalid input syntax for integer: "Signature expired. Please log in again."
+LINE 3: WHERE votes.user_id = 'Signature expired. Please log in agai...
+                              ^
+
+[SQL: SELECT votes.post_id AS votes_post_id, votes.user_id AS votes_user_id, votes.created_on AS votes_created_on 
+FROM votes 
+WHERE votes.user_id = %(user_id_1)s AND votes.post_id = %(post_id_1)s 
+ LIMIT %(param_1)s]
+[parameters: {'user_id_1': 'Signature expired. Please log in again.', 'post_id_1': 8, 'param_1': 1}]
+(Background on this error at: http://sqlalche.me/e/9h9h)
+Thread-2 - 2019-06-30 22:45:59,712 - flask.app - INFO - login
+Thread-3 - 2019-06-30 22:46:16,279 - flask.app - INFO - downvote
+Thread-4 - 2019-06-30 22:46:41,797 - flask.app - INFO - downvote
+Thread-5 - 2019-06-30 22:46:44,812 - flask.app - INFO - downvote
+Thread-6 - 2019-06-30 22:48:10,913 - flask.app - ERROR - get_posts'NoneType' object has no attribute 'get'
+Thread-2 - 2019-06-30 22:51:46,746 - flask.app - ERROR - get_postsname 'p__dict__' is not defined
+Thread-2 - 2019-06-30 22:55:54,731 - flask.app - ERROR - get_postsname 'votes' is not defined
+Thread-2 - 2019-06-30 22:58:47,016 - flask.app - ERROR - get_posts'method' object does not support item assignment
+Thread-2 - 2019-06-30 22:59:10,078 - flask.app - ERROR - get_posts'method' object does not support item assignment
+Thread-2 - 2019-06-30 22:59:30,279 - flask.app - ERROR - get_posts'method' object does not support item assignment
+Thread-3 - 2019-06-30 22:59:48,269 - flask.app - ERROR - get_posts'method' object does not support item assignment

@@ -21,6 +21,7 @@ migrate = Migrate(app, db)
 def deploy():
     """Run deployment tasks"""
     # Migrate database to latest revision
+    
     upgrade()
 
 ####https://github.com/alisezer/flask-template
